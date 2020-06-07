@@ -1,0 +1,12 @@
+
+.proDiv {
+    width: 80%;
+    background: blue;
+    height: 60px;
+    margin: 5px;
+}
+
+.proButton{
+    height: 100%;
+    width: 100%;
+}
