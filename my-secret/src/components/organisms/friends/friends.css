@@ -1,0 +1,36 @@
+.friendBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.friendBoxHover{
+    background-color: rgb(207, 202, 202);
+}
+
+.friendNonBoxHover{
+    background-color: white;
+}
+
+.circular {
+    display: inline-block;
+    position: relative;
+    max-width: 20px;
+    max-height: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.logged {
+    color: green;
+}
+.disconnected {
+    color: red;
+}
+.away {
+    color: yellow;
+}
+
+.friendColumn{
+    align-self: center;
+}

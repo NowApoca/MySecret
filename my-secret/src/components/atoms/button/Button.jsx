@@ -1,24 +1,29 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import './button.css'
+import {Link} from 'react-router-dom'
 const FA = require('react-fontawesome')
 
 export default function Button(props){
 
-    const [currentClass, setClass] = useState((props.pressed)? 'pressed' : 'notHovered')
+    const [pressed, setPressed] = useState((props.pressed)? true : false)
+    const [hover, setHover] = useState(false)
 
+    useEffect((prevProps) => {
+        setPressed(props.pressed)
+    }, [props.pressed])
     return (
-        <div className={currentClass + '-' + props.color} onClick={ () =>{
-            console.log("VER SI CLICKEA")
-        }}
+        <Link to={props.to} style={{ textDecoration: 'none' }}
+            className={ ((pressed)? 'pressed-' + props.color : '') + 
+            ((hover)? ' hovered': ' notHovered')
+        } onClick={ () =>{
+                props.onClick()
+            }}
         onMouseOver={() => {
-            if(!props.pressed){
-                setClass('hovered')
-            }}}
-        onMouseOut={() => {
-            if(!props.pressed){
-                setClass('notHovered')
-            }
-            }} >
+            setHover(true)}}
+        onMouseOut={() => 
+            {
+            setHover(false)}}
+        >
             <div className='proButton'>
                 <h5 className='buttonText'>
             { (props.fa !== undefined) &&  
@@ -29,6 +34,6 @@ export default function Button(props){
             }
             </h5>
             </div>
-        </div>
+        </Link>
     )
 }

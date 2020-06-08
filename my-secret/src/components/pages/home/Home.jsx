@@ -5,14 +5,14 @@ import Friends from '../../organisms/friends/Friends'
 import HomeContent from '../../organisms/homeContent/HomeContent'
 import './home.css'
 
-export default function Home(props){
-
+export default function Home(){
+    console.log("PERO ReNDERIZO ACA QUIZAS?")
     return (
         <div className='homeGrid'>
-            <TopBar></TopBar>
-            <Tools></Tools>
-            <HomeContent></HomeContent>
-            <Friends></Friends>
+            <TopBar/>
+            <Tools/>
+            <HomeContent />
+            <Friends/>
         </div>
     )
 }

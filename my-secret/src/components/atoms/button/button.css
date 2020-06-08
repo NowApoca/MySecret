@@ -15,27 +15,21 @@
     box-shadow: 0 4px 0px 0px blue;
 }
 
+.notPressed{
+    color: black;
+    box-shadow: 0 0px 0px 0px blue;
+}
+
 .proButton{
     height: 100%;
     width: 100%;
     display: flex;
 }
 
-.hovered-blue {
-    box-shadow: 0 4px 0px 0px blue;
-    color: blue;
+.hovered {
+    background-color: rgb(221, 215, 215);
 }
 
-.hovered-red {
-    box-shadow: 0 4px 0px 0px red;
-    color: red;
-}
-
-.notHovered-blue {
-    box-shadow: 0 0px 0px 0px blue;
-    color: black;
-}
-.notHovered-red {
-    box-shadow: 0 0px 0px 0px red;
-    color: black;
+.notHovered {
+    background-color: white;
 }
