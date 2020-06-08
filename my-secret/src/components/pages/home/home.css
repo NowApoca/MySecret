@@ -1,0 +1,43 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.homeGrid {
+    display: grid;
+    position: relative;
+    grid-gap: 3px;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 15% 65% 20%;
+    grid-template-areas: 
+        "d d d" 
+        "a b c"
+}
+
+.topBar{
+    grid-area: d;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.tools{
+    grid-area: a;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+
+.home{
+    grid-area: b;
+    overflow-y: scroll;
+}
+
+.friends{
+    grid-area: c;
+    height: 90vh;
+    overflow-y: scroll;
+}

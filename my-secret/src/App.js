@@ -1,11 +1,11 @@
 import React from 'react';
-import {LogIn} from './components'
+import {LogIn, Home} from './components'
 
 function App() {
   return (
-    <LogIn>
+    <Home>
 
-    </LogIn>
+    </Home>
   );
 }
 

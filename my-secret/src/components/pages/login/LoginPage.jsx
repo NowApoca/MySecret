@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../atoms/button/button'
-import Input from '../../atoms/input/input'
+import Button from '../../atoms/button/Button'
+import Input from '../../atoms/input/Input'
 import './login.css'
 
 export default function(){
