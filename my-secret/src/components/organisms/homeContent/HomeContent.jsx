@@ -1,15 +1,10 @@
 import React from 'react';
 import ImgButton from '../../atoms/imgButton/ImgButton'
 import './homeContent.css'
+import Button from '../../atoms/button/Button'
 
 export default function HomeContent(props){
     const publications = [{
-        text: "5",
-        encryptedText: "5",
-        user: "userTest",
-        timestamp: new Date(),
-        userImage: "noPhoto.png"
-    },{
         text: "5",
         encryptedText: "5",
         user: "userTest",
@@ -19,35 +14,35 @@ export default function HomeContent(props){
     const rows = [];
     publications.map( publication => {
         rows.push(
-            <div className='homeGrid2'>
-                <div className='white1'>
-                    hola 5
-                </div>
-                <div className='white2'>
-                    hola 6
-                </div>
-                <div className='topBarPublication'>
-                    <div className='prueba1'>
-                        <div className='prueba2'>
-                            <h6>hola1</h6>
-                            <h6>hola2</h6>
+            <div className='homePublicationFlex'>
+                <div className='publicationTopBarFlex'>
+                    <div className='userFlex'>
+                        <ImgButton  height='40px' src='/users/noPhoto.png'/>
+                        <div className='userNameAndTimestamp'>
+                            <div>Nombre</div>
+                            <div>Timestamp</div>
                         </div>
                     </div>
+                    <Button to='/home'
+                        onClick={() => {
+                            }}
+                        pressed={false}
+                        color='blue'
+                        fa='cog'
+                        text='SETTINGS'
+                    />
                 </div>
-                <div className='normalText'>
-                    Normal text
+                <div className='publicationContentGrid'>
+                    <div className='normalText'>NORMAL</div>
+                    <div className='encryptedText'>ENCRYPTED</div>
+                    <div className='decrypt'>DECRYPT</div>
+                    <div className='publicationTools'>TOOLS</div>
                 </div>
-                <div className='encryptedText'>
-                    Encripted text
+                <div className='publicationFooterFlex'>
+
                 </div>
-                <div className='decrypted'>
-                    decripted
-                </div>
-                <div className='publicationFooter'>
-                    Footer
-                </div>
-                <div className='comments'>
-                    Comments
+                <div className='publicationCommentsFlex'>
+
                 </div>
             </div>
         )

@@ -25,14 +25,14 @@ export default function Button(props){
             setHover(false)}}
         >
             <div className='proButton'>
-                <h5 className='buttonText'>
+                <h4 className='buttonText'>
             { (props.fa !== undefined) &&  
                 <FA name={props.fa} />
             }
             { (props.text !== undefined) &&  
                 props.text
             }
-            </h5>
+            </h4>
             </div>
         </Link>
     )

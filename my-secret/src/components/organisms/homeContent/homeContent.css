@@ -1,61 +1,69 @@
 
-.homeGrid2 {
-    display: grid;
-    position: relative;
-    height: 200px;
+.homePublicationFlex {
+    display: flex;
+    flex-direction: column;
     border-color: black;
     border-style: solid;
+    border-radius: 10px;
+    height: 300px;
+    width: 80%;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.publicationTopBarFlex{
+    display: flex;
+    flex-direction: row;
+    max-height: 16%;
+    width: 96%;
+    margin-left: 2%;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+}
+
+.userFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+.userNameAndTimestamp{
+    display: flex;
+    flex-direction: column;
+}
+
+.publicationContentGrid{
+    display: grid;
+    position: relative;
+    height: 64%;
     width: 99%;
-    grid-template-rows: 40px repeat(4, 1fr);
-    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-        "h a a a i" 
-        "h b b b i" 
-        "h c c d i" 
-        "h e e e i" 
-        "h f f f i" 
-        "h g g g i";
-}
-
-.prueba1{
-   display: flex;
-   flex-direction: row;
-   align-self: flex-start;
-}
-.prueba1{
-   display: flex;
-   flex-direction: column;
-   align-self: flex-start;
-}
-
-.white1{
-    grid-area: h;
-}
-
-.white2{
-    grid-area: i;
-}
-
-.topBarPublication{
-    grid-area: a;
+        "j j j"
+        "k k l"
+        "m m m";
 }
 
 .normalText{
-    grid-area: b;
+    grid-area: j;
 }
-
 .encryptedText{
-    grid-area: c;
+    grid-area: k;
+}
+.decrypt{
+    grid-area: l;
+}
+.publicationTools{
+    grid-area: m;
 }
 
-.decrypted{
-    grid-area: d;
+
+.publicationFooterFlex{
+    display: flex;
+    flex-direction: row;
 }
 
-.publicationFooter{
-    grid-area: e;
-}
-
-.comments{
-    grid-area: f;
+.publicationCommentsFlex{
+    display: flex;
+    flex-direction: column;
 }

@@ -31,6 +31,7 @@ body, html {
     overflow-y: scroll;
     display: grid;
     grid-auto-rows: 1fr;
+    justify-content: center;
 }
 
 .home{

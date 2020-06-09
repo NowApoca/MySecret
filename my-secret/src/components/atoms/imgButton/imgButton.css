@@ -1,13 +1,10 @@
-.img{
-    max-height: 30px;
-}
-
-
 .circular {
     display: inline-block;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    height: 100%;
+    height: auto;
     width: auto;
+    max-width:100%;
+    max-height:100%;
 }
