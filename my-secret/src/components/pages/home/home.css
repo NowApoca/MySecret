@@ -36,6 +36,8 @@ body, html {
 .home{
     grid-area: b;
     overflow-y: scroll;
+    display: grid;
+    grid-auto-rows: 30vh;
 }
 
 .friends{

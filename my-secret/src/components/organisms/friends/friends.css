@@ -12,15 +12,6 @@
     background-color: white;
 }
 
-.circular {
-    display: inline-block;
-    position: relative;
-    max-width: 20px;
-    max-height: 20px;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
 .logged {
     color: green;
 }

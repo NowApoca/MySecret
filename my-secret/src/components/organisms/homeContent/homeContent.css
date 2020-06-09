@@ -1,0 +1,61 @@
+
+.homeGrid2 {
+    display: grid;
+    position: relative;
+    height: 200px;
+    border-color: black;
+    border-style: solid;
+    width: 99%;
+    grid-template-rows: 40px repeat(4, 1fr);
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-areas: 
+        "h a a a i" 
+        "h b b b i" 
+        "h c c d i" 
+        "h e e e i" 
+        "h f f f i" 
+        "h g g g i";
+}
+
+.prueba1{
+   display: flex;
+   flex-direction: row;
+   align-self: flex-start;
+}
+.prueba1{
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
+}
+
+.white1{
+    grid-area: h;
+}
+
+.white2{
+    grid-area: i;
+}
+
+.topBarPublication{
+    grid-area: a;
+}
+
+.normalText{
+    grid-area: b;
+}
+
+.encryptedText{
+    grid-area: c;
+}
+
+.decrypted{
+    grid-area: d;
+}
+
+.publicationFooter{
+    grid-area: e;
+}
+
+.comments{
+    grid-area: f;
+}
