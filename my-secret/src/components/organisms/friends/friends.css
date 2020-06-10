@@ -4,6 +4,27 @@
     justify-content: space-around;
 }
 
+.friendBoxHovered{
+    background-color: rgb(221, 215, 215);
+}
+
+.friendImgBox{
+    position: relative;
+    height: 35px;
+    width: 35px;
+    margin-top: 2.5px;   
+}
+
+.friendStatusCircle{
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .friendBoxHover{
     background-color: rgb(207, 202, 202);
 }
@@ -13,13 +34,13 @@
 }
 
 .logged {
-    color: green;
+    background-color: green;
 }
 .disconnected {
-    color: red;
+    background-color: red;
 }
 .away {
-    color: yellow;
+    background-color: yellow;
 }
 
 .friendColumn{

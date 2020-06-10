@@ -17,7 +17,7 @@ export default function HomeContent(props){
             <div className='homePublicationFlex'>
                 <div className='publicationTopBarFlex'>
                     <div className='userFlex'>
-                        <ImgButton  height='40px' src='/users/noPhoto.png'/>
+                        <ImgButton  height='40px' src='/users/manu.jpeg'/>
                         <div className='userNameAndTimestamp'>
                             <div>Nombre</div>
                             <div>Timestamp</div>
