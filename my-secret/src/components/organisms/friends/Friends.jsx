@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ImgButton from '../../atoms/imgButton/ImgButton'
+import Button from '../../atoms/button/Button'
 import './friends.css'
 import '../../../images/users/noPhoto.png'
 
@@ -11,6 +12,29 @@ export default function Friends(props){
         {name: "juan3", status: "logged", lastSeen: '14:02'},
         {name: "juan4", status: "logged", lastSeen: '14:02'},
         {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
+        {name: "juan5", status: "logged", lastSeen: '14:02'},
     ]
     const rows = []
     rows.push()
@@ -19,7 +43,12 @@ export default function Friends(props){
     })
     return (
         <div className='friends'>
+            
             {rows}
+            <div className="friendSearch">
+                <input className='friendSearchInput'></input>
+                <Button width='10%' marginLeft='20%' className='searchButton' color='red' fa='search' />
+            </div>
         </div>
     )
 }

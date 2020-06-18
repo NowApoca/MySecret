@@ -9,12 +9,15 @@ export default function HomeContent(props){
         encryptedText: "5",
         user: "userTest",
         timestamp: new Date(),
-        userImage: "noPhoto.png"
+        userImage: "noPhoto.png",
+        likes: 20,
+        decrypted: 5,
+        comments: 3
     }]
     const rows = [];
     publications.map( publication => {
         rows.push(
-            <div className='homePublicationFlex'>
+            <li className='homePublicationFlex'>
                 <div className='publicationTopBarFlex'>
                     <div className='userFlex'>
                         <ImgButton  height='40px' src='/users/manu.jpeg'/>
@@ -33,23 +36,90 @@ export default function HomeContent(props){
                     />
                 </div>
                 <div className='publicationContentGrid'>
-                    <div className='normalText'>NORMAL</div>
-                    <div className='encryptedText'>ENCRYPTED</div>
-                    <div className='decrypt'>DECRYPT</div>
-                    <div className='publicationTools'>TOOLS</div>
-                </div>
-                <div className='publicationFooterFlex'>
+                    <div className='normalText'>
+                        <div className='normalTextContent' >
+                            Asdasdasd asd asd as das dsa
+                        </div>
+                    </div>
+                    <div className='encryptedText'>
+                        <div className='encryptedTextContent' >
+                            Asdasdasd asd asd as das dsa
+                        </div>
+                    </div>
+                    <div className='decrypt'>
+                        <div className='decryptContent' >
+                            Asdasdasd asd asd as das dsa
+                            Asdasdasd asd asd as das dsa
 
+                        <div className='decryptSend'>
+                            <input className='decryptInput' placeholder='hola' type='text'></input>
+                            <div className='decryptButton'>
+                                <Button marginLeft='20%'
+                                color='red' fa='gavel' />
+                            </div>
+                            <div className='decryptButton'>
+                                <Button marginLeft='20%'
+                                color='red' fa='camera' />
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
-                <div className='publicationCommentsFlex'>
-
+                <div className='publicationTools'>
+                    <div className='publicationFooterFlex'>
+                        <Button to='/home'
+                            onClick={() => {}}
+                            pressed={false}
+                            height='15px'
+                            color='red'
+                            fa='heart'
+                            text='24'
+                        />
+                        <Button to='/home'
+                            onClick={() => {}}
+                            pressed={false}
+                            height='15px'
+                            color='red'
+                            fa='share'
+                            text={publication.likes}
+                        />
+                        <Button to='/home'
+                            onClick={() => {}}
+                            pressed={false}
+                            height='15px'
+                            color='red'
+                            fa='unlink'
+                            text={publication.decrypted}
+                        />
+                        <Button to='/home'
+                            onClick={() => {}}
+                            pressed={false}
+                            height='15px'
+                            color='red'
+                            fa='comments'
+                            text={publication.comments}
+                        />
+                    </div>
+                    <div className='publicationCommentsFlex'>
+                        <Button
+                            className='showMoreButton'
+                            to='/home'
+                            onClick={() => {}}
+                            pressed={false}
+                            height='30px'
+                            color='red'
+                            fa='arrow-down'
+                            text="Show comments"
+                        />
+                    </div>
+                
                 </div>
-            </div>
+            </li>
         )
     })
     return (
-        <div className='home'>
+        <ul className='home'>
             {rows}
-        </div>
+        </ul>
     )
 }
