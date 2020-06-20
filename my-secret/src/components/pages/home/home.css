@@ -38,7 +38,9 @@ body, html {
     grid-area: b;
     overflow-y: scroll;
     display: grid;
-    grid-auto-rows: 30vh;
+    height: auto;
+    grid-auto-rows: min-content;
+    grid-gap: 15px;
 }
 
 .friends{
