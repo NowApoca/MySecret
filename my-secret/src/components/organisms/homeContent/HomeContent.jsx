@@ -17,7 +17,7 @@ export default function HomeContent(props){
         commentsContent: [{
             userImage: "noPhoto.png",
             user: "userTest",
-            text: 'sadsdasdasdas',
+            text: 'sadsdasdas vdassadsda sdasdassadsdasda  sdassa dsda sdasdassad sdasdasdas sadsdasda sdassadsdasd asdassadsd asdasdassadsd asdasdassads dasdasdassads dasdasdas',
             likes: 20,
             shared: 24
         },{
@@ -203,7 +203,7 @@ function Publication(props){
         </div>
         <div className='publicationCommentsFlex'>
             { showComments &&
-                <div id='style-1' class='scrollbar'>
+            <div className="showMoreCommentsFlex">
                 <Button
                     onClick={() => {setShowComments(false)}}
                     pressed={false}
@@ -212,11 +212,43 @@ function Publication(props){
                     fa='arrow-up'
                     text="Hide comments"
                 />
+                <div id='style-1' class='commentsContainer'>
                     <div >
                     {publication.commentsContent.map((value, index) => {
-                        return <h6 key={index}>{value.text}</h6>
+                        return <div className='comment'>
+                            <div className='commentContent'>
+                            <div className='userFlex'>
+                                <ImgButton  height='40px' src='/users/manu.jpeg'/>
+                                <div className='userNameAndTimestamp'>
+                                    <div>Nombre</div>
+                                    <div>Timestamp</div>
+                                </div>
+                            </div>
+                            <div className='commentText'>
+                            {value.text}
+                            </div>
+                            </div>
+                            <div className='commentTools'>
+            <Button to='/home'
+                onClick={() => {}}
+                pressed={false}
+                height='15px'
+                color='red'
+                fa='heart'
+                text='24'
+            />
+            <Button to='/home'
+                onClick={() => {}}
+                pressed={false}
+                height='15px'
+                color='red'
+                fa='share'
+                text={publication.likes}
+            /></div>
+                        </div>  
                   })}
                     </div>
+                </div>
                 </div>
                 
             }
