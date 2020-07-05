@@ -1,0 +1,32 @@
+.title{
+    text-align: center;
+    font-size: 45px;
+}
+.subtitle{
+    font-size: 35px;
+}
+.subsubtitle{
+    margin-left: 2.5%;
+    font-size: 25px;
+}
+.paragraph{
+    word-wrap: break-word;
+}
+.document{
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(19, 19, 19);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.code{
+    background-color: gray;
+    color: rgb(156, 50, 50);
+}

@@ -68,78 +68,8 @@ export default function Friends(props){
                 <Button width='10%' marginLeft='20%' className='searchButton' color='red' fa='search' />
             </div>
             <div className='chatContainer'>
-                <div className='chat' style={{backgroundColor: 'blue'}}>
-                    <div className='chatMessages'>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                    </div>
-                    <div className='friendImgBoxChat'>
-                        <img
-                            className='circular'
-                            style={{height: 40 + 'px'}}
-                            src={require('../../../images/users/noPhoto.png')}
-                        ></img>
-                        <span className={'friendStatusCircle logged'}></span>
-                    </div>
-                </div>
-                <div className='chat' style={{backgroundColor: 'blue'}}>
-                    <div className='chatMessages'>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                    </div>
-                    <div className='friendImgBoxChat'>
-                        <img
-                            className='circular'
-                            style={{height: 40 + 'px'}}
-                            src={require('../../../images/users/noPhoto.png')}
-                        ></img>
-                        <span className={'friendStatusCircle logged'}></span>
-                    </div>
-                </div>
-                <div className='chat' style={{backgroundColor: 'blue'}}>
-                    <div className='chatMessages'>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                        <h6>ASD</h6>
-                    </div>
-                    <div className='friendImgBoxChat'>
-                        <img
-                            className='circular'
-                            style={{height: 40 + 'px'}}
-                            src={require('../../../images/users/noPhoto.png')}
-                        ></img>
-                        <span className={'friendStatusCircle logged'}></span>
-                    </div>
-                </div>
+                <FriendChatBox/>
+                <FriendChatBox/>
             </div>
         </div>
     )
@@ -179,6 +109,68 @@ function OuterMessage(props){
     return (
         <div className='messageContainer'>
             <h6 className='outerMessageText' >{props.text}</h6>
+        </div>
+    )
+}
+
+function FriendChatBoxButton(props){
+    const [isHovered, setHover] = useState(false)
+    return (
+        <div className={ ((isHovered)? 'friendImgBoxChat ' + 'chatBoxHovered' :
+            'friendImgBoxChat ' + 'notHovered')
+            }
+            onMouseOver={() => {
+                setHover(true)}}
+            onMouseOut={() => 
+                {
+                setHover(false)}}
+            onClick={() => 
+                {
+                    props.onClick(false)
+            }}
+        >
+            <img
+                className='circular'
+                style={{height: 40 + 'px'}}
+                src={require('../../../images/users/noPhoto.png')}
+            ></img>
+            <span className={'friendStatusCircle logged'}></span>
+        </div>
+    )
+}
+
+
+function FriendChatBoxMessages(props){
+    const [isHovered, setHover] = useState(false)
+    return (
+        <div className='chatMessages'>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+            <h6>ASD</h6>
+        </div>
+    )
+}
+
+function FriendChatBox(props){
+    const [shouldShow, setShow] = useState(false)
+    return (
+        <div className='chat'>
+            {
+                shouldShow &&
+                    <FriendChatBoxMessages/>
+            }
+            <FriendChatBoxButton onClick={ () => { 
+                setShow(!shouldShow)
+            }}/>
         </div>
     )
 }
