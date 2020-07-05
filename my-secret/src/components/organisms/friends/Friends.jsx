@@ -68,27 +68,76 @@ export default function Friends(props){
                 <Button width='10%' marginLeft='20%' className='searchButton' color='red' fa='search' />
             </div>
             <div className='chatContainer'>
-                <div className='chat' style={{backgroundColor: 'red'}}>
-                    <InnerMessage text='asdasdasd' />
-                    <OuterMessage text='asdasdasd' />
-                    <div className='friendImgBox'>
-                        <ImgButton src='/users/manu.jpeg' />
-                        <span className={'friendStatusCircle '+ props.status}></span>
+                <div className='chat' style={{backgroundColor: 'blue'}}>
+                    <div className='chatMessages'>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                    </div>
+                    <div className='friendImgBoxChat'>
+                        <img
+                            className='circular'
+                            style={{height: 40 + 'px'}}
+                            src={require('../../../images/users/noPhoto.png')}
+                        ></img>
+                        <span className={'friendStatusCircle logged'}></span>
                     </div>
                 </div>
                 <div className='chat' style={{backgroundColor: 'blue'}}>
-                    <InnerMessage text='asdasdasd' />
-                    <OuterMessage text='asdasdasd' />
-                    <div className='friendImgBox'>
-                        <ImgButton src='/users/manu.jpeg' />
-                        <span className={'friendStatusCircle '+ props.status}></span>
+                    <div className='chatMessages'>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                    </div>
+                    <div className='friendImgBoxChat'>
+                        <img
+                            className='circular'
+                            style={{height: 40 + 'px'}}
+                            src={require('../../../images/users/noPhoto.png')}
+                        ></img>
+                        <span className={'friendStatusCircle logged'}></span>
                     </div>
                 </div>
-                <div className='chat' style={{backgroundColor: 'yellow'}}>
-                    <InnerMessage text='asdasdasd' />
-                    <OuterMessage text='asdasdasd' />
-                    <div className='friendImgBox'>
-                        <h6>MANUMANUMANU</h6>
+                <div className='chat' style={{backgroundColor: 'blue'}}>
+                    <div className='chatMessages'>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                        <h6>ASD</h6>
+                    </div>
+                    <div className='friendImgBoxChat'>
+                        <img
+                            className='circular'
+                            style={{height: 40 + 'px'}}
+                            src={require('../../../images/users/noPhoto.png')}
+                        ></img>
+                        <span className={'friendStatusCircle logged'}></span>
                     </div>
                 </div>
             </div>
@@ -120,12 +169,16 @@ function FriendBox(props){
 
 function InnerMessage(props){
     return (
-        <h6>{props.text}</h6>
+        <div className='messageContainer'>
+            <h6 className='innerMessageText' >{props.text}</h6>
+        </div>
     )
 } 
 
 function OuterMessage(props){
     return (
-        <h6>{props.text}</h6>
+        <div className='messageContainer'>
+            <h6 className='outerMessageText' >{props.text}</h6>
+        </div>
     )
 }

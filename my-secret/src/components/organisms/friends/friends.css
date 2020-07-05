@@ -80,5 +80,34 @@
 
 .chat{
     width: 33%;
-    height: 40vh;
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatMessages{
+    height: 36vh;
+    overflow-y: auto;
+}
+
+.friendImgBoxChat{
+    position: absolute;
+    bottom: 0;
+    height: 8vh;
+    width: 33%;
+    margin-top: 2.5px;   
+}
+
+.messageContainer{
+  height: 30px;  
+}
+
+.innerMessageText{
+    position: absolute;
+    left: 15px;
+}
+
+.outerMessageText{
+    position: absolute;
+    right: 15px;
 }
