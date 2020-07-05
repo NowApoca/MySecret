@@ -13,7 +13,7 @@ export default function Tools(props){
                 fa='users'
                 text='About us'
             />
-            <Button to='/home'
+            <Button to='/explanation'
                 onClick={() => {
                     }}
                 pressed={false}
@@ -21,7 +21,7 @@ export default function Tools(props){
                 fa='book'
                 text='How does it work'
             />
-            <Button to='/home'
+            <Button to='/documentation'
                 onClick={() => {
                     }}
                 pressed={false}
@@ -29,7 +29,7 @@ export default function Tools(props){
                 fa='map'
                 text='Documentation'
             />
-            <Button to='/home'
+            <Button to='/settings'
                 onClick={() => {
                     }}
                 pressed={false}
@@ -37,8 +37,9 @@ export default function Tools(props){
                 fa='cog'
                 text='SETTINGS'
             />
-            <Button to='/home'
+            <Button to='/'
                 onClick={() => {
+                    props.logOut(false)
                     }}
                 pressed={false}
                 color='blue'

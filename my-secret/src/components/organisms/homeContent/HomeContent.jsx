@@ -5,7 +5,107 @@ import Button from '../../atoms/button/Button'
 import { useState } from 'react';
 
 export default function HomeContent(props){
-    const publications = [{
+    let publications;
+    switch(props.filterData){
+        case 'all':
+        console.log('no vengo aca?', props.filterData)
+        publications = [{
+        text: "5",
+        encryptedText: "5",
+        user: "userTest",
+        timestamp: new Date(),
+        userImage: "noPhoto.png",
+        likes: 10,
+        decrypted: 10,
+        comments: 10,
+        commentsContent: [{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdas vdassadsda sdasdassadsdasda  sdassa dsda sdasdassad sdasdasdas sadsdasda sdassadsdasd asdassadsd asdasdassadsd asdasdassads dasdasdassads dasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        }]
+    },{
+        text: "5",
+        encryptedText: "5",
+        user: "userTest",
+        timestamp: new Date(),
+        userImage: "noPhoto.png",
+        likes: 10,
+        decrypted: 10,
+        comments: 10,
+        commentsContent: [{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        },{
+            userImage: "noPhoto.png",
+            user: "userTest",
+            text: 'sadsdasdasdas',
+            likes: 20,
+            shared: 24
+        }]
+    }]
+        break;
+        default:
+            console.log('no vengo aca 4', props.filterData)
+            publications = [{
         text: "5",
         encryptedText: "5",
         user: "userTest",
@@ -97,7 +197,9 @@ export default function HomeContent(props){
             likes: 20,
             shared: 24
         }]
-    }]
+    }]      
+        break;
+    }
     const rows = [];
     publications.map( publication => {
         rows.push(
@@ -116,6 +218,7 @@ export default function HomeContent(props){
 function Publication(props){
     const [showComments, setShowComments] = useState(false)
     let publication = props.publication
+
     return (
     <div className='homePublicationFlex'>
     <div className='publicationTopBarFlex'>

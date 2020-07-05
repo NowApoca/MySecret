@@ -6,7 +6,12 @@ main {
 }
 
 .proBackground{
-    background-image: linear-gradient( 65.4deg,  rgba(56,248,249,1) -9.1%, rgba(213,141,240,1) 48%, rgba(249,56,152,1) 111.1% );
+    background-image: linear-gradient(
+    65.4deg,
+    rgba(56,248,249,1) -9.1%,
+    rgba(213,141,240,1) 48%,
+    rgba(249,56,152,1) 111.1%
+    );
 }
 
 #grid {
